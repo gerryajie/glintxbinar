@@ -23,7 +23,7 @@ function greet(name, address, birthday) {
   // Insert your code here!
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const message = `Hello, ${name}! Looks like you're ${
+  const message = `Hello, ${name}, Looks like you're ${
     currentYear - birthday
   }! years old, and you lived in ${address}!`;
   console.log(message);
