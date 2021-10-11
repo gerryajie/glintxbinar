@@ -8,42 +8,25 @@ function volume(length, width, height) {
   return length * width * height;
 }
 
-function inputLength() {
-  rl.question(`Masukan Nilai Panjang(m): `, (length) => {
-    if (!isNaN(length)) {
-      inputWidth(length);
-    } else {
-      console.log(`Input Panjang Yang di Inputkan Salah\n`);
-      inputLength();
-    }
-  });
-}
-
-function inputWidth(length) {
-  rl.question(`Masukan Nilai Lebar(m): `, (width) => {
-    if (!isNaN(width)) {
-      inputHeight(length, width);
-    } else {
-      console.log(`Input Lebar Yang di Inputkan Salah\n`);
-      inputWidth(length);
-    }
-  });
-}
-
-function inputHeight(length, width) {
-  rl.question(`Masukan Nilai Tinggi(m): `, (height) => {
-    if (!isNaN(height)) {
-      console.log(`\n Jumlah Volume: ${volume(length, width, height)} m3`);
-      rl.close();
-    } else {
-      console.log(`Input Tinggi Yang di Inputkan Salah\n`);
-      inputHeight(length, width);
-    }
+function input() {
+  rl.question("Masukan Nilai Panjang(m): ", function (length) {
+    rl.question("Masukan Nilai Lebar(m): ", (width) => {
+      rl.question("Masukan Nilai Tinggi(m): ", (height) => {
+        if (length > 0 && width > 0 && height > 0) {
+          console.log(`\nJumlah Volume: ${volume(length, width, height)} m3`);
+          rl.close();
+        } else {
+          console.log(`Input Tinggi Yang di Inputkan Salah\n`);
+          input();
+        }
+      });
+    });
   });
 }
 
 console.log(`Rumus Geometry Cari Volume Balok`);
 console.log(`================================`);
-inputLength();
+
 // Tugas Gerry Ajie Pratama
 // Vlome Balok Geometry1.js
+input();
