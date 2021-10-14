@@ -7,3 +7,4 @@ let newVegetables = vegetables.map((vegetables) => {
   return vegetables + " is a healthy food, it's definitely worth to eat.";
 });
 console.log(newVegetables);
+    

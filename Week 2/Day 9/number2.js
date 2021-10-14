@@ -51,7 +51,7 @@ let negativePeople = people
   .filter((person) => person.status === "Negative")
   .map((neg) => neg.name);
 
-let pilihan = 3;
+let pilihan = 3 ;
 switch (pilihan) {
   case 1:
     console.log(positivePeople + " Is Positive");
