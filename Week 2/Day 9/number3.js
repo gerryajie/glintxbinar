@@ -32,9 +32,9 @@ console.log(data);
 
 function clean(data) {
   // Code here
-  data = data.filter((i) => i !== null);
-  console.log(data);
-  return data;
+  const gery = data.filter((i) => i !== null);
+  console.log(gery);
+  return gery;
 }
 
 /*
