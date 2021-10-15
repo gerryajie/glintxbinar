@@ -1,6 +1,6 @@
 const EventEmitter = require("events");
 const readline = require("readline");
-const { input } = require("../Day 9/number2");
+const input = require("../Day 9/number2");
 
 const my = new EventEmitter();
 

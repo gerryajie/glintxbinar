@@ -54,16 +54,19 @@ let negativePeople = people
 
 function input() {
   let pilihan = 3;
+  let value = "";
   switch (pilihan) {
     case 1:
-      console.log(positivePeople + " Is Positive Covid-19");
+      value = positivePeople + " Is Positive Covid-19";
+
       break;
     case 2:
-      console.log(suspectPeople + " Is Suspect Covid-19");
+      value = suspectPeople + " Is Suspect Covid-19";
+
       break;
     case 3:
-      console.log(negativePeople + " Is Negative Covid-19");
-      return pilihan;
+      value = negativePeople + " Is Negative Covid-19";
   }
+  return value;
 }
-module.exports = { input };
+module.exports = input;
