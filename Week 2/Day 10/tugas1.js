@@ -1,6 +1,7 @@
 const EventEmitter = require("events");
 const readline = require("readline");
-const input = require("../Day 9/number2");
+
+const inputp = require("../Day 9/number2");
 
 const my = new EventEmitter();
 
@@ -8,8 +9,8 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-console.log("Selamat Datang Di Traker Covid-19");
-console.log("=================================");
+console.log("Selamat Datang Di Tracker Covid-19");
+console.log("==================================");
 
 my.on("login:failed", function (email) {
   console.log(`${email} Password Dan email salah!`);
@@ -18,7 +19,8 @@ my.on("login:failed", function (email) {
 
 my.on("login:success", function (email) {
   console.log(`${email} Anda berhasil Login!`);
-  console.log(input());
+  console.log(inputp());
+
   rl.close();
 });
 

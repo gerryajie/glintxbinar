@@ -52,8 +52,8 @@ let negativePeople = people
   .filter((person) => person.status === "Negative")
   .map((neg) => neg.name);
 
-function input() {
-  let pilihan = 3;
+function inputp() {
+  let pilihan = 1;
   let value = "";
   switch (pilihan) {
     case 1:
@@ -69,4 +69,5 @@ function input() {
   }
   return value;
 }
-module.exports = input;
+
+module.exports = inputp;
