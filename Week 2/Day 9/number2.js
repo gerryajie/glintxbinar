@@ -40,6 +40,7 @@ let people = [
     status: "Negative",
   },
 ];
+
 let positivePeople = people
   .filter((person) => person.status === "Positive")
   .map((pos) => pos.name);
@@ -51,14 +52,18 @@ let negativePeople = people
   .filter((person) => person.status === "Negative")
   .map((neg) => neg.name);
 
-let pilihan = 3 ;
-switch (pilihan) {
-  case 1:
-    console.log(positivePeople + " Is Positive");
-    break;
-  case 2:
-    console.log(suspectPeople + " Is Suspect");
-    break;
-  default:
-    console.log(negativePeople + " Is Negative");
+function input() {
+  let pilihan = 3;
+  switch (pilihan) {
+    case 1:
+      console.log(positivePeople + " Is Positive Covid-19");
+      break;
+    case 2:
+      console.log(suspectPeople + " Is Suspect Covid-19");
+      break;
+    case 3:
+      console.log(negativePeople + " Is Negative Covid-19");
+      return pilihan;
+  }
 }
+module.exports = { input };
