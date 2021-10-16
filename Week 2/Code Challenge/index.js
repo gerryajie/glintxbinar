@@ -7,7 +7,7 @@ const test = require("./lib/test.js");
 
 // Optional
 function clean(data) {
-  return data.filter((dor) => dor);
+  return data.filter((i) => typeof i === "number");
 }
 
 // Should return array
@@ -22,7 +22,7 @@ function sortAscending(data) {
       }
     }
   }
-  return data.filter((dor) => dor);
+  return clean(data);
 }
 
 // Should return array
@@ -38,7 +38,7 @@ function sortDecending(data) {
     }
   }
 
-  return data.filter((dor) => dor);
+  return clean(data);
 }
 
 // DON'T CHANGE
