@@ -15,6 +15,7 @@ function input() {
       index.rl.question("Masukan Nilai Tinggi(m): ", (height) => {
         if (length > 0 && width > 0 && height > 0) {
           console.log(`\nJumlah Volume: ${volume(length, width, height)} m3`);
+
           index.rl.close();
         } else {
           console.log(`Input Tinggi Yang di Inputkan Salah\n`);
@@ -25,8 +26,8 @@ function input() {
   });
 }
 
-console.log(`Rumus Geometry Cari Volume Balok`);
-console.log(`================================`);
+// console.log(`Rumus Geometry Cari Volume Balok`);
+// console.log(`================================`);
 
 // Tugas Gerry Ajie Pratama
 // Vlome Balok Geometry1.js

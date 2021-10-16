@@ -22,8 +22,8 @@ function jari(r) {
   });
 }
 
-console.log(`Rumus Geometry Cari Volume Bola`);
-console.log(`===============================`);
+// console.log(`Rumus Geometry Cari Volume Bola`);
+// console.log(`===============================`);
 module.exports = { jari };
 // Tugas Gerry Ajie Pratama
 // Vlome Bola Geometry2.js

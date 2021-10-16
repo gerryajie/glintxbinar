@@ -7,12 +7,13 @@ const test = require("./lib/test.js");
 
 // Optional
 function clean(data) {
-  return data.filter((i) => typeof i === "number");
+  return data.filter((x) => x);
 }
 
 // Should return array
 function sortAscending(data) {
   // Code Here
+  
   for (let i = 0; i < data.length - 1; i++) {
     for (let j = 0; j < data.length - 1 - i; j++) {
       if (data[j] > data[j + 1]) {
@@ -22,7 +23,7 @@ function sortAscending(data) {
       }
     }
   }
-  return clean(data);
+  return data.filter((x) => x);
 }
 
 // Should return array
@@ -38,7 +39,7 @@ function sortDecending(data) {
     }
   }
 
-  return clean(data);
+  return data.filter((x) => x);
 }
 
 // DON'T CHANGE
