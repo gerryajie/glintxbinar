@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Toko MaretIndo Pusat",
+    "branch": "Jakarta 1",
+    "address": "Jalan Jendral Sudirman No 34 Jakarta pusat"
+  },
+  {
+    "id": 2,
+    "name": "Toko MaretIndo Cahaya",
+    "branch": "Jakarta 1",
+    "address": "Jalan Jendral Sasuit No 24 Jakarta pusat"
+  },
+  {
+    "id": 3,
+    "name": "Toko MaretIndo Cahaya",
+    "branch": "Jakarta 2",
+    "address": "Jalan Jendral nasution Tangerang"
+  },
+  {
+    "id": 4,
+    "name": "Toko MaretIndo Ciputat",
+    "branch": "Jakarta 2",
+    "address": "Jalan Suryamangkunegara patel batas 11"
+  },
+  {
+    "id": 5,
+    "name": "Toko MaretIndo Pelangi",
+    "branch": "Banten 1",
+    "address": "Jalan Pelita Harapan no 103"
+  },
+  {
+    "id": 6,
+    "name": "Toko MaretIndo Merona",
+    "branch": "Banten 1",
+    "address": "Jalan Bungur Besar no 139"
+  }
+]
