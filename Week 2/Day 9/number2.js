@@ -69,5 +69,5 @@ function inputp() {
   }
   return value;
 }
-
+// console.log(inputp());
 module.exports = inputp;

@@ -10,7 +10,7 @@ fetch(urlState)
     console.log(data);
     return fetch(urlCity);
   })
-  .then((response) => response.json())
+
   .then((data) => {
     console.log(data);
     return fetch(urlContinent);
