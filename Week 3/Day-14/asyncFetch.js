@@ -1,8 +1,9 @@
 const fetch = require("node-fetch");
 
-let urlProduk = "https://dummyproducts-api.herokuapp.com";
-let urlProduk1 = "https://fakestoreapi.com/products/1";
-let urlLimit = "https://fakestoreapi.com/products?limit=5";
+let urlProduk =
+  "http://universities.hipolabs.com/search?country=United+Kingdom";
+let urlProduk1 = "https://fakestoreapi.com/products";
+let urlLimit = "https://api.coinpaprika.com/v1/coins/btc-bitcoin";
 let data = {};
 
 const asyncFetch = async () => {

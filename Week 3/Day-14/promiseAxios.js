@@ -1,24 +1,28 @@
 const axios = require("axios");
 
-let urlState = "https://fakestoreapi.com/products";
-let urlCity = "https://fakestoreapi.com/products/1";
-let urlContinent = "https://fakestoreapi.com/products?limit=5";
+let urlUniv = "hhttp://universities.hipolabs.com/search?country=United+Kingdom";
+let urlTodos = "https://fakestoreapi.com/products";
+let urlCoin = "hhttps://api.coinpaprika.com/v1/coins/btc-bitcoin";
 let data = {};
 
 axios
-  .get(urlState)
+  .get(urlUniv)
   .then((response) => {
-    data = { ...data, users: response.data };
+    data = {
+      posts: response.data.map((item) => {
+        return { name: item.name, country: item.country };
+      }),
+    };
 
-    return axios.get(urlCity);
+    return axios.get(urlTodos);
   })
   .then((response) => {
-    data = { ...data, users: response.data };
+    data = { ...data, title: response.data };
 
-    return axios.get(urlContinent);
+    return axios.get(urlCoin);
   })
   .then((response) => {
-    data = { ...data, albums: response.data };
+    data = { ...data, name: response.data };
     console.log(data);
   })
   .catch((err) => {

@@ -1,8 +1,8 @@
 const axios = require("axios");
 
-let urlPosts = "https://fakestoreapi.com/products";
-let urlUsers = "https://fakestoreapi.com/products/1";
-let urlAlbums = "https://fakestoreapi.com/products?limit=5";
+let urlPosts = "http://universities.hipolabs.com/search?country=United+Kingdom";
+let urlUsers = "https://fakestoreapi.com/products";
+let urlAlbums = "https://api.coinpaprika.com/v1/coins/btc-bitcoin";
 let data = {};
 
 const fetchApi = async () => {

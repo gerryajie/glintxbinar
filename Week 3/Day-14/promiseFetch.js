@@ -1,19 +1,26 @@
 const fetch = require("node-fetch");
 
-let urlState = "https://fakestoreapi.com/products";
-let urlCity = "https://fakestoreapi.com/products/1";
-let urlContinent = "https://fakestoreapi.com/products?limit=5";
+let urlState = "http://universities.hipolabs.com/search?country=United+Kingdom";
+let urlCity = "https://fakestoreapi.com/products";
+let urlContinent = "https://api.coinpaprika.com/v1/coins/btc-bitcoin";
+let data = {};
 
 fetch(urlState)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    data = { response: data };
     return fetch(urlCity);
   })
 
-  .then((data) => {
-    console.log(data);
+  .then((urlState) => urlState.json())
+  .then((stateJson) => {
+    data = { ...data, state: stateJson };
     return fetch(urlContinent);
+  })
+  .then((urlContinent) => urlContinent.json())
+  .then((continentJson) => {
+    data = { ...data, continent: continentJson };
+    console.log(data);
   })
 
   .catch((err) => {
