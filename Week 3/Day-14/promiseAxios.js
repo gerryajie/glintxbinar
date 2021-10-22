@@ -8,11 +8,7 @@ let data = {};
 axios
   .get(urlState)
   .then((response) => {
-    data = {
-      posts: response.data.map((item) => {
-        return { title: item.title, userId: item.userId };
-      }),
-    };
+    data = { ...data, users: response.data };
 
     return axios.get(urlCity);
   })

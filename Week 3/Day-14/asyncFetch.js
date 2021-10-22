@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-let urlProduk = "https://fakestoreapi.com/products";
+let urlProduk = "https://dummyproducts-api.herokuapp.com";
 let urlProduk1 = "https://fakestoreapi.com/products/1";
 let urlLimit = "https://fakestoreapi.com/products?limit=5";
 let data = {};
@@ -11,6 +11,7 @@ const asyncFetch = async () => {
     let responseProduk1 = await fetch(urlProduk1);
     let responseLimit = await fetch(urlLimit);
 
+    // Promise All
     let response = await Promise.all([
       responseProduk.json(),
       responseProduk1.json(),

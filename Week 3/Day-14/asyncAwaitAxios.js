@@ -25,9 +25,7 @@ const fetchApi = async () => {
     // };
 
     data = {
-      posts: response[0].data.map((item) => {
-        return { title: item.title, userId: item.userId };
-      }),
+      posts: response[0].data,
       users: response[1].data,
       albums: response[2].data,
     };
