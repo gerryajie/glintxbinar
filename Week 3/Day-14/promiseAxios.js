@@ -1,8 +1,8 @@
 const axios = require("axios");
 
 let urlUniv = "hhttp://universities.hipolabs.com/search?country=United+Kingdom";
-let urlTodos = "https://fakestoreapi.com/products";
-let urlCoin = "https://fakestoreapi.com/products/category/jewelery";
+let urlProduct = "https://fakestoreapi.com/products";
+let urlJewel = "https://fakestoreapi.com/products/category/jewelery";
 let data = {};
 
 axios
@@ -14,12 +14,12 @@ axios
       }),
     };
 
-    return axios.get(urlTodos);
+    return axios.get(urlProduct);
   })
   .then((response) => {
     data = { ...data, title: response.data };
 
-    return axios.get(urlCoin);
+    return axios.get(urlJewel);
   })
   .then((response) => {
     data = { ...data, name: response.data };

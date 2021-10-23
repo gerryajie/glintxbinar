@@ -1,8 +1,8 @@
 const axios = require("axios");
 
-let urlPosts = "http://universities.hipolabs.com/search?country=United+Kingdom";
-let urlUsers = "https://fakestoreapi.com/products";
-let urlAlbums = "https://fakestoreapi.com/products/category/jewelery";
+let urlUniv = "http://universities.hipolabs.com/search?country=United+Kingdom";
+let urlProduk = "https://fakestoreapi.com/products";
+let urlJewel = "https://fakestoreapi.com/products/category/jewelery";
 let data = {};
 
 const fetchApi = async () => {
@@ -11,9 +11,9 @@ const fetchApi = async () => {
     // let responseUsers = await axios.get(urlUsers);
     // let responseAlbums = await axios.get(urlAlbums);
     let response = await Promise.all([
-      axios.get(urlPosts),
-      axios.get(urlUsers),
-      axios.get(urlAlbums),
+      axios.get(urlUniv),
+      axios.get(urlProduk),
+      axios.get(urlJewel),
     ]);
 
     // data = {
@@ -25,9 +25,9 @@ const fetchApi = async () => {
     // };
 
     data = {
-      posts: response[0].data,
-      users: response[1].data,
-      albums: response[2].data,
+      univ: response[0].data,
+      produk: response[1].data,
+      jewel: response[2].data,
     };
 
     console.log(data);
