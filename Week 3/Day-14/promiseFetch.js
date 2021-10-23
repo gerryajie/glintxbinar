@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 
 let urlState = "http://universities.hipolabs.com/search?country=United+Kingdom";
 let urlCity = "https://fakestoreapi.com/products";
-let urlContinent = "https://api.coinpaprika.com/v1/coins/btc-bitcoin";
+let urlContinent = "https://fakestoreapi.com/products/category/jewelery";
 let data = {};
 
 fetch(urlState)

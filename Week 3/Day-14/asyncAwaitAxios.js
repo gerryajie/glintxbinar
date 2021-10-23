@@ -2,7 +2,7 @@ const axios = require("axios");
 
 let urlPosts = "http://universities.hipolabs.com/search?country=United+Kingdom";
 let urlUsers = "https://fakestoreapi.com/products";
-let urlAlbums = "https://api.coinpaprika.com/v1/coins/btc-bitcoin";
+let urlAlbums = "https://fakestoreapi.com/products/category/jewelery";
 let data = {};
 
 const fetchApi = async () => {
